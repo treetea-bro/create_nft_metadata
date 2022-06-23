@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>make NFT metadata</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet" />
+  </head>
+  <body>
+    <form action="/download" method="get">
+      <div class="container">
+        <div>
+          <label for="nft_num"><h1>NFT Number</h1></label
+          ><input type="number" name="nft_num" id="nft_num" />
+        </div>
+        <div class="json">
+          <h1>JSON setting</h1>
+          <div>
+            <label for="name">name : </label
+            ><input type="text" name="name" id="name" />
+          </div>
+          <!-- <div>
+            <label for="image">image : </label
+            ><input type="text" name="image" id="image" />
+          </div> -->
+          <div>
+            <label for="symbol">symbol : </label
+            ><input type="text" name="symbol" id="symbol" />
+          </div>
+          <div>
+            <label for="description">description : </label
+            ><input type="text" name="description" id="description" />
+          </div>
+          <div>
+            <span id="attr">attributes</span> <br />
+            <label for="trait_type">trait_type : </label
+            ><input type="text" name="trait_type" id="trait_type" />
+            <label for="value">value : </label
+            ><input type="text" name="value" id="value" />
+          </div>
+        </div>
+        <button>Download</button>
+      </div>
+    </form>
+  </body>
+</html>
