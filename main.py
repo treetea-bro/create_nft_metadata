@@ -19,10 +19,6 @@ templates = Jinja2Templates(directory="templates")
 def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, "a": 123})
 
-@app.get("/items/{id}", response_class=HTMLResponse)
-async def read_item(request: Request, id: str):
-    return templates.TemplateResponse("item.html", {"request": request, "id": id})
-
 @app.get("/download")
 def exec(nft_num: int, name: str, symbol: str, description: str, trait_type: str, value: str):
     FOLDER_DIR = "images/"
