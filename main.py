@@ -17,7 +17,7 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 def root(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request, "a": 123})
+    return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/download")
 def exec(nft_num: int, name: str, symbol: str, description: str, trait_type: str, value: str):
